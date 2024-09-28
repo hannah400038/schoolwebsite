@@ -1,0 +1,294 @@
+/* Color Variables */
+:root {
+    --primary-color: #1e3a8a; /* Main color */
+    --secondary-color: #2980b9; /* Button color */
+    --hover-color: #3498db; /* Button hover color */
+    --text-color: #333; /* Default text color */
+    --light-text-color: #ecf0f1; /* Light text color on hover */
+    --background-color: #ffffff; /* Background color for cards */
+    --shadow-color: rgba(0, 0, 0, 0.1); /* Shadow color */
+    --dim-overlay: rgba(0, 0, 0, 0.5); /* Dim overlay color */
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    height: 7vh;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    width: 100%;
+    color: #1b2a67;
+}
+
+.logo {
+    color: #1e3a8a;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav-link {
+    color: #1b2a67;
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--light-text-color);
+}
+
+.dashboard-button {
+    background-color: rgba(30, 58, 138, 0.8);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+.dashboard-button:hover {
+    background-color: rgba(27, 42, 103, 0.8);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    width: 100%;
+    padding: 50px 0;
+    background-image: url('./assets/heroImage.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--dim-overlay);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.hero-text {
+    margin: 0;
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.hero-text p {
+    margin-top: -24px;
+    font-size: 1.2em;
+    color: #ffffff;
+    line-height: 1.5;
+    max-height: 4.5em;
+    overflow: hidden;
+}
+
+.learn-more {
+    background-color: rgba(30, 58, 138, 0.8);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+.learn-more:hover {
+    background-color: rgba(27, 42, 103, 0.8);
+}
+
+/* Feature Cards Section */
+.features {
+    display: flex;
+    align-items: center; /* Center align cards */
+    width: 100%;
+    padding: 50px 0;
+    margin-top: -45px;
+    justify-content: space-evenly;
+}
+
+.feature-card {
+    background-color: var(--background-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    width: 300px;
+    margin: 15px; /* Add margin between cards */
+}
+
+.feature-image {
+    width: 100%; /* Make image responsive */
+    object-fit: cover;
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 12px; /* Space between image and text */
+}
+
+.feature-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.feature-card p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* About Us, Teachers, Contact Sections */
+.about,
+.teachers,
+.contact {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about{
+    margin-top: -4rem;
+}
+
+.about-content {
+    display: flex;
+    align-items: center; /* Align image and text vertically */
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.about-image {
+    width: 50%;
+    height: 300px;
+    margin-right: 20px; /* Space between image and text */
+    object-fit: cover;
+}
+.about{
+    color: #1b2a67;
+
+}
+
+.about h2,
+.teachers h2,
+.contact h2 {
+    margin-bottom: 20px;
+    color: #1b2a67;
+}
+
+/* Teachers Section */
+.teacher-grid {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 32px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.teacher {
+    text-align: center;
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    width: 200px;
+}
+
+.teacher img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Contact Section */
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh; /* Adjust height as needed */
+    padding: 50px;
+    background-image: url('./assets/heroImage.jpg'); /* Hero image as background */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+    color: white; /* Text color */
+}
+
+.contact-content {
+    background-color: rgba(30, 58, 138, 0.7); /* Semi-transparent background for readability */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px var(--shadow-color); /* Add shadow for depth */
+    max-width: 400px; /* Limit the width of the form */
+    width: 100%; /* Full width up to max-width */
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+    text-align: center; /* Center the header */
+    color: white;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-content button {
+    background-color: #2980b9;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #1b2a67;
+}

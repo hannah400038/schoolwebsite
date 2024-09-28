@@ -1,0 +1,104 @@
+.student-list-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.student-list-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #1e3a8a; /* Changed to #1e3a8a */
+  text-align: center;
+}
+
+.add-button {
+  background-color: #1e3a8a; /* Changed to #1e3a8a */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table-header {
+  background-color: #1e3a8a; /* Changed to #1e3a8a */
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+.student-row {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.student-cell {
+  padding: 10px;
+  text-align: left;
+}
+
+.edit-button, .delete-button {
+  border-radius: 5px;
+  border: none;
+  padding: 8px 12px;
+  font-size: 0.9em;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.edit-button {
+  background-color: #1e3a8a; /* Changed to #1e3a8a */
+}
+
+.edit-button:hover {
+  background-color: #1a2d4d; /* Adjusted hover to match */
+}
+
+.delete-button {
+  background-color: #e53935;
+  margin-left: 10px;
+}
+
+.delete-button:hover {
+  background-color: #c62828;
+}
+
+form {
+  margin-top: 20px;
+}
+
+input {
+  width: 98%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #1e3a8a; /* Changed to #1e3a8a */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1a2d4d; /* Adjusted hover to match */
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+}
